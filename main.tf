@@ -9,7 +9,7 @@ terraform {
 }
 
 provider "docker" {
-  host = "unix:///var/run/docker.sock"
+  host = "npipe:////.//pipe//docker_engine"
 }
 
 resource "docker_image" "nginx" {
