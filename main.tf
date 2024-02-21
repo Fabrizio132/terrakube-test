@@ -8,9 +8,9 @@ terraform {
   }
 }
 
-# provider "docker" {
-#   host = "npipe:////.//pipe//docker_engine"
-# }
+provider "docker" {
+  host = "npipe:////.//pipe//docker_engine"
+}
 
 resource "docker_image" "nginx" {
   name         = "nginx:latest"
