@@ -19,7 +19,7 @@ resource "docker_image" "nginx" {
 
 resource "docker_container" "nginx" {
   image = docker_image.nginx.image_id
-  name  = "tutorial" //Nome del container
+  name  = "tutorialNumberOne" //Nome del container
 
   ports {
     internal = 222
