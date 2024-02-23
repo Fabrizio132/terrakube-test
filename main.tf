@@ -1,13 +1,21 @@
-provider "aws" {
-  region                   = "us-west-2"              #Regione da utilizzare
-  shared_credentials_files = "$HOME/.aws/credentials" # path con il file delle credenziali
-  profile                  = "default"                #Il profilo da utilizzare per accedere ad AWS. Il profilo default deve essere configurato in "./.aws/credentials"
+terraform {
+  required_providers {
+    grafana = {
+      source  = "grafana/grafana"
+      version = "2.11.0"
+    }
+  }
 }
 
-resource "aws_vpc" "vpc" {
-  cidr_block = "10.0.0.0/16"
+provider "grafana" {
+  alias         = "cloud"
+  cloud_api_key = "my-token"
+}
 
-  tags = {
-    Name = " MY - VPC"
-  }
+resource "grafana_cloud_stack" "my_stack" {
+  provider = grafana.cloud
+
+  name        = "myteststack"
+  slug        = "myteststack"
+  region_slug = "us"
 }

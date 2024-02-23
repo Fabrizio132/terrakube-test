@@ -1,24 +1,24 @@
 # This file is maintained automatically by "terraform init".
 # Manual edits may be lost in future updates.
 
-provider "registry.terraform.io/kreuzwerker/docker" {
-  version     = "3.0.2"
-  constraints = "~> 3.0.1"
+provider "registry.terraform.io/grafana/grafana" {
+  version     = "2.11.0"
+  constraints = "2.11.0"
   hashes = [
-    "h1:DcRxJArfX6EiATluWeCBW7HoD6usz9fMoTK2U3dmyPk=",
-    "zh:15b0a2b2b563d8d40f62f83057d91acb02cd0096f207488d8b4298a59203d64f",
-    "zh:23d919de139f7cd5ebfd2ff1b94e6d9913f0977fcfc2ca02e1573be53e269f95",
-    "zh:38081b3fe317c7e9555b2aaad325ad3fa516a886d2dfa8605ae6a809c1072138",
-    "zh:4a9c5065b178082f79ad8160243369c185214d874ff5048556d48d3edd03c4da",
-    "zh:5438ef6afe057945f28bce43d76c4401254073de01a774760169ac1058830ac2",
-    "zh:60b7fadc287166e5c9873dfe53a7976d98244979e0ab66428ea0dea1ebf33e06",
-    "zh:61c5ec1cb94e4c4a4fb1e4a24576d5f39a955f09afb17dab982de62b70a9bdd1",
-    "zh:a38fe9016ace5f911ab00c88e64b156ebbbbfb72a51a44da3c13d442cd214710",
-    "zh:c2c4d2b1fd9ebb291c57f524b3bf9d0994ff3e815c0cd9c9bcb87166dc687005",
-    "zh:d567bb8ce483ab2cf0602e07eae57027a1a53994aba470fa76095912a505533d",
-    "zh:e83bf05ab6a19dd8c43547ce9a8a511f8c331a124d11ac64687c764ab9d5a792",
-    "zh:e90c934b5cd65516fbcc454c89a150bfa726e7cf1fe749790c7480bbeb19d387",
-    "zh:f05f167d2eaf913045d8e7b88c13757e3cf595dd5cd333057fdafc7c4b7fed62",
-    "zh:fcc9c1cea5ce85e8bcb593862e699a881bd36dffd29e2e367f82d15368659c3d",
+    "h1:Df3hNsAyUqEdJIbu8221xLSA9hS3xsLBKwIsgQF9iPA=",
+    "zh:0cd0cc2c8e35cc888ec98540b275f167474e618e48d68d48c7f1a468391df24f",
+    "zh:28b5d17af246a164c276dd359916f340bb149f9e991402671f8d74cf1c3661dd",
+    "zh:34a37d59556bfe3b24bab01797fe8d05d1b06378590641dec84c71047e2e941d",
+    "zh:3f8ad863b711024a318b058f89470f4d500c06219ffde5423fbc8d58aa9d41cc",
+    "zh:3fb023796b4bb856be0604ce64148a73ee74478ae72e22b017f001d397bd8438",
+    "zh:5474d82bb406ac53c72484c74de33849266aa4fe80ac603ba5dbc82629c567a9",
+    "zh:55b76bdf7cf25ef93444eb30d3c6c57ec12ca57af75ae132734e077e6b16a552",
+    "zh:7fb16da38bff622b23bc30f201a407883c6fa8169bc9eb95b78607e0ba71ef0f",
+    "zh:b84ea642d70308f222c9043665febabba08d9c17eefcadd420297167bcb9ec02",
+    "zh:bdf877cb93fe43f40c47049da6a40a082b05377e4fa0f4215cdf0a03f3eb70a9",
+    "zh:c2ebc165cbb2efd72f5126231fba98addba3f5a2924c37fdedb905729264e4f7",
+    "zh:f1525376d66fee86c6f2a2a3cc27beaa8e0b3c9fa641f97bc432d162dcdf1394",
+    "zh:f3c6a0196bc09b27a11aa9f11a2c6f495bf5a891eb5d96a02ef9b4f023b258c0",
+    "zh:f5db0fdce25e43b5fdaf6326c31244d5da9c9b23a958eaa08713829f5bed358a",
   ]
 }
