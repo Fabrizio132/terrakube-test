@@ -1,29 +1,13 @@
-terraform {
-  required_providers {
-    docker = {
-      source  = "kreuzwerker/docker" //Origine del provider che deriva da → registry.terraform.io/kreuzwerker/docker
-      version = "~> 3.0.1"           //Vincolo di versione, se non impostato, ad ogni inizializzazione scarica il più recente che non potrebbe essere
-      //più compatibile con la nostra configurazione
-    }
-  }
+provider "aws" {
+  region                   = "us-west-2"              #Regione da utilizzare
+  shared_credentials_files = "$HOME/.aws/credentials" # path con il file delle credenziali
+  profile                  = "default"                #Il profilo da utilizzare per accedere ad AWS. Il profilo default deve essere configurato in "./.aws/credentials"
 }
 
-provider "docker" {
-  #host = "npipe:////.//pipe//docker_engine"
-  host = "unix:///var/run/docker.sock"
-}
+resource "aws_vpc" "vpc" {
+  cidr_block = "10.0.0.0/16"
 
-resource "docker_image" "nginx" {
-  name         = "nginx:latest"
-  keep_locally = false //Indica se deve mantenere localmente le immagini scaricate una volta distrutto il terraform main, se true allora li mantiene
-}
-
-resource "docker_container" "nginx" {
-  image = docker_image.nginx.image_id
-  name  = "tutorial" //Nome del container
-
-  ports {
-    internal = 80
-    external = 8000
+  tags = {
+    Name = " MY - VPC"
   }
 }
