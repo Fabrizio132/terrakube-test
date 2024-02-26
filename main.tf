@@ -8,6 +8,8 @@ terraform {
   }
 }
 
+variable "DOCKER_SOCK" {}
+
 provider "docker" {
   # host = "unix:///var/run/docker.sock"
   host = var.DOCKER_SOCK
