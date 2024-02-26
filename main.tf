@@ -1,21 +1,23 @@
+# Creazione di un infrastruttura docker dove alzo un container nginx
+
 terraform {
   required_providers {
-    grafana = {
-      source  = "grafana/grafana"
-      version = "2.11.0"
+    docker = {
+      source = "kreuzwerker/docker"
     }
   }
 }
 
-provider "grafana" {
-  alias         = "cloud"
-  cloud_api_key = "my-token"
+provider "docker" {
+  host = "tcp://localhost:2375"
 }
 
-resource "grafana_cloud_stack" "my_stack" {
-  provider = grafana.cloud
+resource "docker_container" "nginx" {
+  name  = "container-nginx"
+  image = "nginx:latest"
 
-  name        = "myteststack"
-  slug        = "myteststack"
-  region_slug = "us"
+  ports {
+    internal = 80
+    external = 8888
+  }
 }
